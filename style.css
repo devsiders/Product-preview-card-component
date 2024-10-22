@@ -1,0 +1,123 @@
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    font-size: 14px;
+}
+
+h2{
+    color: var(--Very-dark-blue);
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h5{
+    color: var(--Dark-grayish-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+p{
+    color: var(--Dark-grayish-blue);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+strong{
+    color: var(--Dark-cyan);
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.card{
+    background-color: var(--White);
+    border: 0;
+    max-width: 600px;
+}
+
+.img-mobile{
+    display: none;
+}
+
+.btn-cart{
+    background-color: var(--Dark-cyan);
+    border: 0;
+    border-radius: 10px;
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 10px;
+    padding-left: 35px;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+.icon-cart{
+    position: absolute;
+    top: 15px;
+    left: 60px;
+}
+
+.btn-cart:hover{
+    background-color: hsl(158, 45%, 20%);
+}
+
+@media only screen and (max-width: 767px) {
+    body{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .card{
+        max-width: 400px;
+        overflow-y: auto;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .img-desktop{
+        display: none;
+    }
+
+    .icon-cart{
+        left: 113px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    br{
+        display: none;
+    }
+
+    .card{
+        max-width: 400px;
+        overflow-y: auto;
+    }
+
+    .icon-cart{
+        left: 90px;
+    }
+}
